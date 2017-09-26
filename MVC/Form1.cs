@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*************
+ * Josh Romito
+ * CP_330 Week 3 Lab
+ * September 26
+ * **************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +18,6 @@ namespace MVC
 {
     public partial class newIssueForm : viewer
     {
-        // connect with the controller so that we can issue control commands
-        //private Controller _ctrlr;
-        //public Controller MVC_controller
-        //{
-        //    set { _ctrlr = value; }
-        //}
-
-        ////connect with the model so that we can access the data
-        //private Model _mdl;
-        //public Model MVC_model
-        //{
-        //    set { _mdl = value; }
-        //}
 
         public newIssueForm()
         {
@@ -38,6 +31,7 @@ namespace MVC
             // remember: we do not change to the model
         }
 
+        //override values updated - and update label with value from model
         public override void ValuesUpdated()
         {
             resolutionCountLabel.Text = MVC_model.GetCount().ToString();

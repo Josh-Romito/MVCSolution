@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*************
+ * Josh Romito
+ * CP_330 Week 3 Lab
+ * September 26
+ * **************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
