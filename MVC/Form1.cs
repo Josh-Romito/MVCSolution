@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace MVC
 {
-    public partial class newIssueForm : viewer
+    public partial class newIssueForm : Viewer
     {
 
         public newIssueForm()
@@ -34,7 +34,7 @@ namespace MVC
         //override values updated - and update label with value from model
         public override void ValuesUpdated()
         {
-            resolutionCountLabel.Text = MVC_model.GetCount().ToString();
+            resolutionCountLabel.Text = "Issues submitted: " + MVC_model.GetCount().ToString();
         }
     }
 }

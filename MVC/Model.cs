@@ -14,10 +14,10 @@ namespace MVC
 {
     public class Model
     {
-
         private int _count = 0;
+
         //list of viewers
-        List<viewer> _forms = new List<viewer>();
+        List<Viewer> _viewers = new List<Viewer>();
 
         public void ChangeValue(int delta){
             _count += delta;
@@ -31,15 +31,15 @@ namespace MVC
         }
 
         //method to add viewer object to view list
-        public void addView (viewer formToAdd) {
-            _forms.Add(formToAdd);
+        public void addView (Viewer viewer) {
+            _viewers.Add(viewer);
         }
 
 
         public void AlertForChanges()
         {
             //foreach viewer
-            foreach (viewer v in _forms)
+            foreach (Viewer v in _viewers)
             {
                 //call ValuesUpdated
                 v.ValuesUpdated();

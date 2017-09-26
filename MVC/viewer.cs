@@ -13,14 +13,13 @@ using System.Windows.Forms;
 
 namespace MVC
 {
-    public abstract class viewer : Form
+    public abstract class Viewer : Form
     {
         // connect with the controller so that we  can issue control commands
         protected Controller _ctrlr;
         public Controller MVC_controller
         {
             set { _ctrlr = value; }
-            
         }
 
         //connect with the model so that we can access the data
@@ -30,7 +29,7 @@ namespace MVC
             set { this._mdl = value; }
             get { return this._mdl; }
         }
-        abstract public void ValuesUpdated();
 
+        abstract public void ValuesUpdated();
     }
 }

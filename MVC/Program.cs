@@ -23,34 +23,34 @@ namespace MVC
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // create a controller
+            //create a controller
             Controller ctrlr = new Controller();
 
-            // create a model
+            //create a model
             // --- you do this (just like making a controller)
-            Model myModel = new Model();
+            Model dataModel = new Model();
 
             //connect controller to issues form
             newIssueForm issueForm = new newIssueForm();
             issueForm.MVC_controller = ctrlr;
 
-            // connect the model to the issue form
-            issueForm.MVC_model = myModel;
+            //connect the model to the issue form
+            issueForm.MVC_model = dataModel;
 
             //connect controller to resolution form
             resolutionForm resolveForm = new resolutionForm();
             resolveForm.MVC_controller = ctrlr;
 
-            // connect the model to the resolve form
-            resolveForm.MVC_model = myModel;
+            //connect the model to the resolve form
+            resolveForm.MVC_model = dataModel;
 
             //we need to add the model to the existing controller
-            ctrlr.MVC_model = myModel;
+            ctrlr.MVC_model = dataModel;
 
 
             // need to add the two forms to the model using the addView function
-            myModel.addView(issueForm);
-            myModel.addView(resolveForm);
+            dataModel.addView(issueForm);
+            dataModel.addView(resolveForm);
 
             resolveForm.Show();
             Application.Run(issueForm);

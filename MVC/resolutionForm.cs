@@ -17,7 +17,7 @@ using System.Diagnostics;
 
 namespace MVC
 {
-    public partial class resolutionForm : viewer
+    public partial class resolutionForm : Viewer
     {
 
         public resolutionForm()
@@ -28,7 +28,7 @@ namespace MVC
         //override values updated - and update label with value from model
         public override void ValuesUpdated()
         {
-            resolutionCountLabel.Text = MVC_model.GetCount().ToString();
+            resolutionCountLabel.Text = "Issues to resolve: " + MVC_model.GetCount().ToString();
         }
 
 
